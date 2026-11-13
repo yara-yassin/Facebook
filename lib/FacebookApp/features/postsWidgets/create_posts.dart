@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import '../../core/theming/colors/facebook_app_colors.dart';
 
 class CreatePost extends StatelessWidget {
-  const new({
-    super.key,
-  });
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,22 +13,23 @@ class CreatePost extends StatelessWidget {
         spacing: 12,
         children: [
           CircleAvatar(
-            backgroundImage: AssetImage(
-              "assets/images/profile_img.jpg",
-            ),
+            backgroundImage: AssetImage("assets/images/profile_img.jpg"),
           ),
           const Expanded(
-            child: Text(
-              "What's in Your Mind?",
-              style: TextStyle(
-                fontSize: 16,
-                color: FacebookAppColors.greyColor,
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: "What's on your mind?",
+                hintStyle: TextStyle(
+                  fontSize: 16,
+                  color: FacebookAppColors.greyColor,
+                ),
+                border: InputBorder.none,
               ),
             ),
           ),
           const Icon(
             Icons.photo_library,
-            color:FacebookAppColors.greenColor,
+            color: FacebookAppColors.greenColor,
             size: 27,
           ),
         ],
